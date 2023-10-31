@@ -50,5 +50,4 @@ exports.refactoredDeterministicPartitionKey = (event) => {
   candidate = candidate?candidate:event;// if partitionKey not found set input to event
   candidate = candidate?createHash(candidate):TRIVIAL_PARTITION_KEY; // if input is set, hashit otherwise set it to trivial
   return candidate;
-  
 };
